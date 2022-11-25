@@ -7,11 +7,11 @@ class Personnes(models.Model):
     prenom = models.CharField(max_length=50)
     ville = models.CharField(max_length=50)
     age = models.IntegerField()
-    commentaire = models.TextField()
+    commentaire = models.TextField(null=True)
     photo = models.ImageField()
 
     def __str__(self):
-        return f'{self.photo} {self.nom} {self.prenom} {self.ville} {self.age}'
+        return f'{self.nom} {self.prenom} {self.ville} {self.age}'
 
 class Objets(models.Model):
     nom = models.CharField(max_length=50)

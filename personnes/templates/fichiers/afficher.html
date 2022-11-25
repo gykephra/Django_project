@@ -1,0 +1,46 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annonces</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+    <div class="entete">
+
+    </div>
+    <div class="row">
+        {% if formInfo %}
+        {% for perso in formInfo %}
+            <div class="card" style="width: 18rem;">
+                <div class="idt">
+                    {{ perso.pk }}
+               </div>
+   
+                <div class="nom">
+                    {{ perso.nom }}
+                </div>
+
+                <div class="prenom">
+                    {{ perso.prenom }}
+                </div>
+                <div class="ville">
+                    {{ perso.ville }}
+                </div>
+                <div class="age">
+                    {{ perso.age }}
+                </div>
+                    
+            </div>
+            </div>
+        </div>
+            
+
+            {% endfor %}
+        {%endif%}
+
+</body>
+</html>
