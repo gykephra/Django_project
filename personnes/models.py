@@ -8,7 +8,7 @@ class Personnes(models.Model):
     ville = models.CharField(max_length=50)
     age = models.IntegerField()
     commentaire = models.TextField(null=True)
-    photo = models.ImageField()
+   # photo = models.ImageField()
 
     def __str__(self):
         return f'{self.nom} {self.prenom} {self.ville} {self.age}'
