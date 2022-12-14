@@ -59,11 +59,6 @@ class PersonneForm(forms.Form):
             )
 
 
-    #photo = forms.CharField(
-     #   required=False, 
-      #  widget = forms.ImageField(
-      #      attrs={
-       #         'placeholder': 'Ajouter la photo de la personne ici'
-        #    }
-        #    )
-      #  )
+    photo = forms.ImageField()
+        
+        
